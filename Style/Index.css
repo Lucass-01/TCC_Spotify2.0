@@ -1,113 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
 *{
-    margin: 0;
-    padding: 0;
-    font-family: 'poppins',sans-serif;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
 }
-section{
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #131312;
+    font-family: 'Poppins', sans-serif;
     display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    width: 100%;
-    background-image: url(../Img/animacao_carro.gif);
-
-    background-position: center;
-    background-size: cover;
-
-}
-.form-box{
-    position: relative;
-    width: 400px;
-    height: 450px;
-    background: transparent;
-    border:2px solid rgba(255,255,255,0.5);
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-h2{
-    font-size: 2em;
-    color: white;
-    text-align: center;
-}
-.inputbox{
-    position: relative;
-    margin: 30px 0;
-    width: 310px;
-    border-bottom: 2px solid #fff;
-}
-.inputbox label{
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    color: #fff;
-    font-size: lem;
-    pointer-events: none;
-    transition: .5s;
-}
-input:focus ~ label,
-input:valid ~ label{
-top: -5px;
-}
-.inputbox input{
-    width: 100%;
-    height: 50px;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: lem;
-    padding:0 35px 0 5px;
-    color: #fff;
-}
-.inputbox ion-icon{
-    position: absolute;
-    right: 8px;
-    color: #fff;
-    font-size: 1.2em;
-    top: 20px;
-}
-.forget{
-    margin: -15px 0 15px;
-    font-size: .9em;
-    color: #fff;
-    display: flex;
     justify-content: center;
 }
-.forget label input{
-    margin-right: 3px;
+header{
+    width: 85%;
+    height: 95%;
+    border: 1px solid #fff;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
 }
-.forget label a{
+header .menu_side, .song_side{
+    position: relative;
+    width: 25%;
+    height: 90%;
+    /* border: 1px solid #fff; */
+    background-color: #111727;
+    box-shadow: 5px 0px 2px #090f1f;
     color: #fff;
-    text-decoration: none;
 }
-.forget label a:hover{
-    text-decoration: underline;
+header .song_side{
+    width: 75%;
+    background: #0b1320
 }
-button{
+header .master_play{
     width: 100%;
-    height: 40px;
-    border-radius: 40px;
-    background: #fff;
-    border: none;
-    outline: none;
+    height: 10%;
+    background: #111727;
+    box-shadow: 0px 3px 8px #090f1f;
+}
+header .menu_side h1{
+    font-size: 20px;
+    margin: 15px 0px 0px 20px;
+    font-weight: 500;
+}
+header .menu_side .playlist{
+    margin: 40px 0px 0px 20px;
+}
+header .menu_side .playlist h4{
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    color: #4c5262;
     cursor: pointer;
-    font-size: lem;
-    font-weight: 600;
+    display: flex;
+    align-items: center;
+    transition: .3s linear;
 }
-.register{
-    font-size: .9em;
+header .menu_side .playlist h4:hover{
     color: #fff;
-    text-align: center;
-    margin: 25px 0 10px;
 }
-.register p a{
-    text-decoration: none;
-    color: #fff;
-    font-weight: 600;
+header .menu_side .playlist h4 span{
+    position: relative;
+    margin-right: 35px;
 }
-.register p a:hover{
-    text-decoration: underline;
+header .menu_side .playlist h4 span::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border: 2px solid #4c5262;
+    border-radius: 50%;
+    top: -4px;
+    transition: .3s linear;
+}
+header .menu_side .playlist h4:hover span::before{
+    border: 2px solid #fff;
+}
+header .menu_side .playlist h4 .bi{
+    display: none;
+}
+header .menu_side .playlist .active{
+    color: #36e2ec;
+}
+header .menu_side .playlist .active span{
+    display: none;
+}
+header .menu_side .playlist .active .bi{
+    display: flex;
+    margin-right: 20px;
 }
