@@ -97,6 +97,12 @@ button{
     font-size: lem;
     font-weight: 600;
 }
+button a{
+    font-size: lem;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+}
 .register{
     font-size: .9em;
     color: #fff;
